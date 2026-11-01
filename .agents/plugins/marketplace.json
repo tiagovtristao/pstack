@@ -1,14 +1,14 @@
 {
-  "name": "pskills",
+  "name": "pstack",
   "interface": {
-    "displayName": "pskills"
+    "displayName": "pstack"
   },
   "plugins": [
     {
-      "name": "pskills",
+      "name": "pstack",
       "source": {
         "source": "local",
-        "path": "./harness/pstack/codex"
+        "path": "./"
       },
       "policy": {
         "installation": "AVAILABLE",

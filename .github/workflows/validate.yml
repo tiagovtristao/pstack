@@ -1,0 +1,25 @@
+name: Validate pstack
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check package
+        run: node scripts/check-package.mjs
+      - name: Test package validation
+        run: node --test scripts/*.test.mjs
+      - name: Check guides
+        run: node scripts/check-pstack-docs.mjs
+      - name: Install statechart test dependencies
+        run: npm install --prefix skills/statechart/scripts --ignore-scripts --no-audit --no-fund
+      - name: Test statechart helpers
+        run: node --disable-warning=ExperimentalWarning --test skills/statechart/scripts/test/*.test.ts

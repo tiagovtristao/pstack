@@ -1,0 +1,31 @@
+{
+  "name": "pstack",
+  "displayName": "pstack",
+  "version": "0.2.0",
+  "description": "Portable engineering workflows, review skills, and verification guides for coding agents.",
+  "author": {
+    "name": "Lauren Tan"
+  },
+  "homepage": "https://github.com/tiagovtristao/pstack",
+  "repository": "https://github.com/tiagovtristao/pstack",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "pstack",
+    "poteto-mode",
+    "workflow",
+    "principles",
+    "agent-style",
+    "subagents",
+    "unslop"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "workflow",
+    "principles",
+    "review",
+    "planning"
+  ],
+  "skills": "./skills/",
+  "agents": "./agents/"
+}
